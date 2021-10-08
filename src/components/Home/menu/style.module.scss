@@ -1,7 +1,25 @@
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+  
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 6%);
+
+  > div {
+    max-width: 1280px;
+    width: 90vw;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .logo {
-  position: absolute;
-  margin-left: 20vw;
-  margin-top: 12px;
+  margin-top: 15px;
 }
 
 .detailsMenu {
@@ -10,7 +28,6 @@
 
 .navMenu {
   float: right;
-  width: 40vw;
   margin-top: 20px;
 }
 
@@ -18,8 +35,10 @@
   text-decoration: none;
   font-size: 1.1rem;
   font-family: "Yaldevi";
+
   display: inline-block;
   width: 80px;
+
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -32,8 +51,10 @@
   width: 6px;
   height: 6px;
   background: var(--mainPurple);
+
   border-radius: 50%;
   opacity: 0;
+
   -webkit-transform: translateX(30px);
   transform: translateX(30px);
   -webkit-transition: all 0.2s ease-in-out;
@@ -82,10 +103,8 @@
 
 .detailsMenu {
   width: 100vw;
-  margin-top: 0.4rem;
-}
+  margin-top: 0.5rem;
 
-.detailsMenu {
   font-family: "Yaldevi";
   font-size: 35px;
 }
@@ -94,9 +113,11 @@
   float: right;
   writing-mode: vertical-lr;
   text-align: center;
+
   padding: 12px 10px;
   margin-right: 1rem;
   color: #7b2cbf;
+
   cursor: pointer;
   user-select: none;
   transition: transform 200ms ease-in-out 0s;
@@ -121,18 +142,30 @@
   content: "";
 }
 .mobileMenu {
+  position: fixed;
+  top: 22px;
+  margin-top: 40px;
+
+  width: 100vw;
+  background-color: white;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   overflow: hidden;
   animation: closeMenu 300ms ease-in-out forwards;
+
+  box-shadow: 0 28px 38px 0 rgb(0 0 0 / 21%);
 }
 .mobileMenu a {
   padding: 12px 24px;
   margin: 0 16px;
+
   text-decoration: none;
-  transition: filter 200ms linear 0s;
   font-size: 16px;
+
+  transition: filter 200ms linear 0s;
 }
 .mobileMenu a:nth-of-type(1) {
   padding-top: 24px;
@@ -150,7 +183,7 @@
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1008px) {
   .detailsMenu {
     display: inline;
   }
@@ -160,7 +193,20 @@
   .navMenu {
     display: none;
   }
-  .logo{
-    margin-left: 5vw;
+  .logo {
+    position: absolute;
+  }
+  .navBar {
+    > div {
+      max-width: 1144px;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .navBar {
+    > div {
+      max-width: 1144px;
+    }
   }
 }

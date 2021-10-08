@@ -1,0 +1,133 @@
+.introContainer {
+    font-family: "Yaldevi";
+
+    max-width: 1280px;
+    width: 90vw;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 72px;
+    min-height: 760px;
+    display: flex;
+    align-items: center;
+}
+
+.introText {
+    flex: 1 1 auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+.introTitle {
+    margin-bottom: 32px;
+    font-size: 28px;
+
+    line-height: 1;
+    font-weight: 600;
+}
+
+.introContainer {
+    p {
+        margin-bottom: 64px;
+        font-size: 17px;
+        line-height: 32px;
+    }
+
+    button {
+        height: 2.6em;
+        min-width: 196px;
+        border-radius: 6px;
+
+        
+        background-color: var(--mainPurple);
+        cursor: pointer;
+
+        font-size: 20px;
+        font-family: "Yaldevi";
+        color: white;
+
+        outline: none;
+        border: none;
+        padding: 0 10px;
+    }
+    button:hover {
+        transition: all 0.2s;
+        opacity: 0.8;
+    }
+
+    img {
+        margin-right: -3%;
+        width: 50%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .introContainer {
+        max-width: 1144px;
+
+        img {
+            margin-right: -3%;
+            width: 55%;
+        }
+    }
+}
+
+@media (max-width: 1030px) {
+    .introContainer {
+        max-width: 1144px;
+
+        img {
+            margin-right: -3%;
+            width: 40%;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 32px;
+            margin-bottom: 50px;
+        }
+
+        .introTitle {
+            font-size: 24px;
+        }
+
+        button {
+            height: 2.6em;
+            min-width: 196px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .introContainer {
+        min-height: auto;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    
+        img {
+            margin-right: -3%;
+            width: 100%;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 32px;
+            margin-bottom: 30px;
+        }
+
+        .introTitle {
+            font-size: 18px;
+        }
+
+        button {
+            height: 2.6em;
+            min-width: 196px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
+}

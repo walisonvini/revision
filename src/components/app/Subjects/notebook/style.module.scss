@@ -1,0 +1,272 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    z-index: 99999;
+
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+
+    pointer-events: none;
+    top: -10000%;
+    transition: 350ms;
+}
+
+.modal.active {
+    top: 0%;
+    transition: 350ms;
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.notebook {
+    width: 90vw;
+    height: 95%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 20px;
+    display: flex;
+}
+
+.matters {
+    width: 15vw;
+    background-color: var(--lightGray);
+    border: 2px solid #222;
+}
+
+.notebook textarea {
+    width: 75vw;
+    color: #f5f5f5;
+    resize: none;
+    background-color: var(--lightBlack);
+    outline: 0;
+    border: 2px solid #222;
+}
+
+.close {
+    height: 28px;
+    width: 28px;
+    font-size: 26px;
+
+    position: relative;
+
+    right: 10px;
+    top: -12px;
+
+    border: 1px solid #222;
+    border-radius: 50%;
+    background-color: var(--lightGray);
+    color: #000;
+
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.mattersName {
+    font-family: "Yaldevi";
+    font-weight: 600;
+
+    transform: rotate(2deg);
+
+    margin: 15px;
+    padding: 0 5px;
+    height: 27px;
+
+    background: #ddd;
+
+    border: 1px solid #222;
+    box-shadow: 3px 3px 0 #222;
+
+    text-align: center;
+    cursor: pointer;
+
+    i {
+        margin-left: 20px;
+    }
+}
+
+.checkboxContainer {
+    font-size: 20px;
+    width: 10vw;
+    margin-top: 5rem;
+}
+
+.checkbox {
+    transform: rotate(2deg);
+
+    margin-bottom: 25px;
+    padding: 0 5px;
+    height: 27px;
+
+    background: #ddd;
+    text-align: center;
+
+    border: 1px solid #222;
+    box-shadow: 3px 3px 0 #222;
+}
+
+/*
+    ---------------------------------------- Mobile Matters and Checkbox ----------------------------------------------------
+*/
+.sla {
+    width: 90vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.detailsMenu {
+    position: absolute;
+    width: 90vw;
+    display: none;
+}
+
+.summaryMenu {
+    writing-mode: vertical-lr;
+    font-size: 30px;
+
+    cursor: pointer;
+    user-select: none;
+    transition: transform 200ms ease-in-out 0s;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 20px;
+
+    color: var(--white);
+    opacity: 0.5;
+}
+
+.mattersMenu {
+    position: absolute;
+    width: 40vw;
+}
+
+.mattersNameMenu {
+    font-family: "Yaldevi";
+    font-weight: 600;
+
+    margin-bottom: 15px;
+
+    padding: 0 15px;
+    height: 27px;
+
+    background: #ddd;
+
+    border: 1px solid #222;
+    box-shadow: 3px 3px 0 #222;
+
+    cursor: pointer;
+
+    i {
+        margin-left: 20px;
+    }
+}
+
+.checkboxContainerMenu {
+    position: absolute;
+    right: 0;
+    width: 35vw;
+}
+
+.checkboxMenu {
+    margin-bottom: 25px;
+    padding: 0 5px;
+    height: 27px;
+
+    background: #ddd;
+    text-align: center;
+
+    border: 1px solid #222;
+    box-shadow: 1px 1px 1px #222;
+}
+
+.summaryMenu::after {
+    content: "III";
+    letter-spacing: -1px;
+}
+.summaryMenu:hover {
+    transform: scale(1.1);
+}
+.summaryMenu::marker {
+    font-size: 0;
+}
+.detailsMenu[open] .mobileMenu {
+    animation-name: menuAnim;
+}
+.detailsMenu[open] .summaryMenu::before {
+    content: "X";
+}
+.detailsMenu[open] .summaryMenu::after {
+    content: "";
+}
+
+@keyframes menuAnim {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 312px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1530px) {
+    .checkboxContainer {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1140px) {
+    .matters {
+        display: none;
+    }
+    .checkboxContainer {
+        display: none;
+    }
+    .notebook textarea {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .close {
+        margin-top: 28px;
+        position: absolute;
+    }
+
+    .detailsMenu {
+        display: inline;
+    }
+}
+
+@media (max-width: 430px) {
+    .mattersNameMenu {
+        font-size: 14px;
+
+        i {
+            margin-left: 5px;
+        }
+    }
+}
+
+@media (max-width: 305px) {
+    .checkboxMenu {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 285px) {
+    .mattersNameMenu {
+        font-size: 12px;
+
+        i {
+            margin-left: 15px;
+        }
+    }
+}

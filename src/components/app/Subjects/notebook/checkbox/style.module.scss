@@ -1,0 +1,39 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    padding: 1px;
+
+    .border {
+        position: relative;
+        border: 2px solid black;
+        border-radius: 4px;
+        margin-right: 8px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .indicator {
+        position: absolute;
+        z-index: 1;
+        background: var(--pink);
+        margin: 2px;
+        width: 12px;
+        height: 12px;
+        transform: scale(0);
+        transition: transform 100ms;
+    }
+
+    .indicator.checked {
+        transform: scale(1);
+    }
+
+    .label {
+        font-family: "Yaldevi";
+        font-weight: 600;
+        position: relative;
+    }
+    .label.active {
+        text-decoration: line-through;
+    }
+}

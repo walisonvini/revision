@@ -16,7 +16,7 @@ export function Notebook() {
         <div>
             <div className={modal ? `${styles.modal} ${styles.active}` : `${styles.modal}`}>
                 { /* ------- Mobile Menu -----*/}
-                <div className={styles.sla}>
+                <div className={styles.detailsContainer}>
                     <details className={styles.detailsMenu}>
                         <summary className={styles.summaryMenu}></summary>
                         <div className={styles.mattersMenu}>

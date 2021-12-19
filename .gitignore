@@ -1,34 +1,46 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+### Next.js ###
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
+web/node_modules
+web/.pnp
+web/.pnp.js
 
 # testing
-/coverage
+web/coverage
 
 # next.js
-/.next/
-/out/
+web/.next/
+web/out/
 
 # production
-/build
+web/build
 
 # misc
-.DS_Store
+web/.DS_Store
 *.pem
 
 # debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+web/npm-debug.log*
+web/yarn-debug.log*
+web/yarn-error.log*
 
 # local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+web/.env.local
+web/.env.development.local
+web/.env.test.local
+web/.env.production.local
 
 # vercel
-.vercel
+web/.vercel
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+
+server/venv-revision

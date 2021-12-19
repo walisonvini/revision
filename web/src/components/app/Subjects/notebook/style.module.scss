@@ -115,7 +115,7 @@
 /*
     ---------------------------------------- Mobile Matters and Checkbox ----------------------------------------------------
 */
-.sla {
+.detailsContainer {
     width: 90vw;
 
     margin-left: auto;
@@ -188,33 +188,25 @@
     box-shadow: 1px 1px 1px #222;
 }
 
-.summaryMenu::after {
-    content: "III";
-    letter-spacing: -1px;
-}
-.summaryMenu:hover {
-    transform: scale(1.1);
-}
-.summaryMenu::marker {
-    font-size: 0;
-}
-.detailsMenu[open] .mobileMenu {
-    animation-name: menuAnim;
-}
-.detailsMenu[open] .summaryMenu::before {
-    content: "X";
-}
-.detailsMenu[open] .summaryMenu::after {
-    content: "";
+.summaryMenu {
+    &::after {
+        content: "III";
+        letter-spacing: -1px;
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+    &::marker {
+        font-size: 0;
+    }
 }
 
-@keyframes menuAnim {
-    0% {
-        height: 0;
+.detailsMenu[open] .summaryMenu {
+    &::before {
+        content: "X";
     }
-    100% {
-        height: 312px;
-        margin-top: 40px;
+    &::after {
+        content: "";
     }
 }
 

@@ -5,7 +5,7 @@
 
   width: 100%;
   height: 70px;
-  
+
   background-color: white;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 6%);
 
@@ -29,22 +29,22 @@
 .navMenu {
   float: right;
   margin-top: 20px;
-}
 
-.navMenu a {
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-family: "Yaldevi";
+  a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: "Yaldevi";
 
-  display: inline-block;
-  width: 80px;
+    display: inline-block;
+    width: 80px;
 
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
 
-.navMenu a:hover {
-  color: var(--mainPurple);
+  a:hover {
+    color: var(--mainPurple);
+  }
 }
 
 .navMenu .dot {
@@ -108,7 +108,6 @@
   font-family: "Yaldevi";
   font-size: 35px;
 }
-
 .summaryMenu {
   float: right;
   writing-mode: vertical-lr;
@@ -122,24 +121,28 @@
   user-select: none;
   transition: transform 200ms ease-in-out 0s;
 }
-.summaryMenu::after {
-  content: "III";
-  letter-spacing: -1px;
-}
-.summaryMenu:hover {
-  transform: scale(1.1);
-}
-.summaryMenu::marker {
-  font-size: 0;
+.summaryMenu {
+  &::after {
+    content: "III";
+    letter-spacing: -1px;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+  &::marker {
+    font-size: 0;
+  }
 }
 .detailsMenu[open] .mobileMenu {
   animation-name: menuAnim;
 }
-.detailsMenu[open] .summaryMenu::before {
-  content: "X";
-}
-.detailsMenu[open] .summaryMenu::after {
-  content: "";
+.detailsMenu[open] .summaryMenu {
+  &::before {
+    content: "X";
+  }
+  &::after {
+    content: "";
+  }
 }
 .mobileMenu {
   position: fixed;

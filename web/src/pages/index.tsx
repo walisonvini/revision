@@ -1,8 +1,9 @@
 import { Menu } from "../components/Home/menu"
 import { Introdution } from "../components/Home/introduction"
-import styles from "../styles/home.module.scss";
 
-export default function Home() {
+import noAuth from "../utils/noAuth";
+
+function Home() {
   return (
     <div>
       <div>
@@ -12,3 +13,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default noAuth(Home); 

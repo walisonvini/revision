@@ -1,5 +1,10 @@
 .childrenContainer{
     background-color: var(--lightGray);
+    height: 100vh;
+
+    @media (max-width: 1300px) {
+        height: 0%
+    }
 }
 
 .children{

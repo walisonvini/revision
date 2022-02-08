@@ -6,12 +6,18 @@ export function Menu() {
     return (
         <div className={styles.navBar}>
             <div>
-                <a href="/">
-                    <img src="./logo.png" className={styles.logo} />
-                </a>
+                <Link href="/">
+                    <a>
+                        <img src="/logo.png" className={styles.logo} alt="" />
+                    </a>
+                </Link>
                 <nav className={styles.navMenu}>
-                    <a href="/">Home</a>
-                    <a href="/">Sobre</a>
+                    <Link href="/">
+                        <a>Home</a>
+                    </Link>
+                    <Link href="/">
+                        <a>Sobre</a>
+                    </Link>
                     <Link href="/signin">
                         <a>Entrar</a>
                     </Link>
@@ -25,8 +31,12 @@ export function Menu() {
             <details className={styles.detailsMenu}>
                 <summary className={styles.summaryMenu}></summary>
                 <nav className={styles.mobileMenu}>
-                    <a href="/">Home</a>
-                    <a href="/">Sobre</a>
+                    <Link href="/">
+                        <a>Home</a>
+                    </Link>
+                    <Link href="/">
+                        <a>Sobre</a>
+                    </Link>
                     <Link href="/signin">
                         <a>Entrar</a>
                     </Link>

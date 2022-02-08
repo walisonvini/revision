@@ -1,14 +1,14 @@
 import styles from "../styles/pages/signin.module.scss";
-
 import Link from 'next/link'
+import noAuth from "../utils/noAuth";
 
-export default function Signup() {
+function Signup() {
     return(
         <div className={styles.containerSignin}>
             <div className={styles.wrapSignin}>
                 <form className={styles.signinForm}>
                     <span>Bem Vindo</span>
-                    <span><img src="/logo-img.png"/></span>
+                    <span><img src="/logo-img.png" alt=""/></span>
                     <div className={styles.wrapInput100}>
                         <input placeholder="Username" type="text" name="username" />
                     </div>
@@ -41,3 +41,5 @@ export default function Signup() {
         </div>
     ) 
 }
+
+export default noAuth(Signup); 

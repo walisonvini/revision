@@ -14,7 +14,7 @@ export function Introdution(){
                 </p>
                 <button>Comece agora, é grátis</button>
             </div>
-            <img src="/image1.png"/>
+            <img src="/image1.png/" alt="" />
         </div>
     )
 }

@@ -2,12 +2,12 @@ import { Container } from "../../components/app/container"
 import { Blocks } from "../../components/app/Subjects/blocks"
 import { Search } from "../../components/app/Subjects/search"
 import { Notebook } from "../../components/app/Subjects/notebook"
-
-import styles from "../../styles/pages/app/subjects.module.scss"
 import { ModalProvider } from "../../contexts/ModalContext"
 
+import styles from "../../styles/pages/app/subjects.module.scss"
+import withAuth from "../../utils/withAuth"
 
-export default function Subjects() {
+function Subjects() {
     return(
         <Container>
             <ModalProvider>
@@ -30,4 +30,6 @@ export default function Subjects() {
             </ModalProvider>
         </Container>
     )
-} 
+}
+
+export default withAuth(Subjects);

@@ -20,9 +20,4 @@ export const SidebarData = [
     icon: <IoIcons.IoIosSettings />
     
   },
-  {
-    title: 'Sair',
-    path: '/logout',
-    icon: <IoIcons.IoIosLogOut />
-  }
 ];
